@@ -1,0 +1,90 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html,
+body {
+    height: 100dvh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    background-image: url("../img/Home_background.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+
+/* start of footer section */
+.footer-section {
+    display: flex;
+    flex-direction: column;
+    background-color: #e8f3ea !important;
+    color: #fff !important;
+}
+
+.footer-top-section {
+    display: flex;
+    justify-content: space-between;
+}
+  
+.footer-image-section {
+    font-family: "Poppins", Arial;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #50B5D2;
+    padding-left: 2rem;
+}
+
+.footer-description-section {
+    font-family: "Poppins", Arial;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #2a2a2a;
+    padding-top: 2rem;
+}
+
+.social-media-icon img {
+    margin-top: 1rem;
+    width: 2rem;
+    height: 2rem;  
+}
+
+.footer-contact-section {
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins", Arial;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #555B54;
+    padding-top: 2rem;
+    padding-left: 5rem; 
+}
+
+.footer-contact-section img {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 1rem;
+}
+
+.footer-contact-section a {
+    text-decoration: none;
+    color: #555B54;
+    padding-bottom: 0.5rem;
+}
+
+.footer-bottom-section {
+    font-family: "Poppins", Arial;
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-align: center;
+    color: #555B54;
+}
+
+/* end of footer */
