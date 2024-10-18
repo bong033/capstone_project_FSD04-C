@@ -16,6 +16,9 @@
     <link rel="stylesheet" href="/styles/index.css">
     <link rel="stylesheet" href="/styles/navbar.css">
     <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=chat" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=send" />
+    <link rel="stylesheet" href="/styles/chat.css">
 
 </head>
 <body>
@@ -71,7 +74,6 @@
             </div>
         </div>
         
-
         <div class="row">
             <img src="./img/Home/Home_card_quality of life.jpg" alt="">
             <div class="card-body">
@@ -89,8 +91,30 @@
         </div>
     </div>
 
- </section>
+    <section>
+        <button class="chat-btn">
+            <span class="material-symbols-outlined">chat</span>
+        </button>
+        <div class="chat-popup">
+            <div class="chat-area">
+                <div class="incoming-msg">
+                    <img src="https://static.vecteezy.com/system/resources/previews/009/906/521/original/nurse-woman-icon-outline-illustration-vector.jpg" class="avatar" alt="">
+                    <span class="msg">Hi, how can I help you?</span>
+                </div>
 
+                <div class="out-msg">
+                    <!--span>Test</span-->
+                </div>
+
+            </div>
+            <div class="input-area">
+                <input type="text">
+                <button class="submit">
+                    <span class="material-symbols-outlined">send</span>
+                </button>
+            </div>
+        </div>
+    </section>
     <!-- start of footer -->
 
     <footer class="col footer-section">
@@ -135,6 +159,7 @@
     <!-- External Custom Script -->
     <script src="/scripts/Mock.js"></script>  <!-- TODO: to remove in production env. --> 
     <script src="/scripts/const.js"></script>
+    <script src="/scripts/chat.js"></script>
     
     <script src="/scripts/auth.js"></script>
     <script src="/scripts/components/NavController.js"></script>
@@ -147,6 +172,20 @@
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous">
-    </script> 
+    </script>
+    <!--script>
+        let toggleBot = false;
+        function toggleFunction(){
+            //document.getElementById("toggleDiv").classList.toggle("chatbot m-auto");
+            const botElement = document.getElementById("toggleDiv");
+            if (toggleBot){
+                botElement.className = "d-block";
+                toggleBot = true;
+            } else {
+                botElement.className = "d-none";
+                toggleBot = false;
+            }
+        }
+    </script-->
 </body>
 </html>
