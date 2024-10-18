@@ -3,6 +3,7 @@ const chatBtn = document.querySelector('.chat-btn');
 const submitBtn = document.querySelector('.submit');
 const chatArea = document.querySelector('.chat-area');
 const inputElm = document.querySelector('input');
+const chatText = document.querySelector('#chat-text');
 
 //
 const API_KEY = "51517890d17a4c9d8dc7b18bb9fbd3c0";
@@ -37,22 +38,22 @@ const generateResponse = (incomingChatDiv) => {
     }).catch((error) => {
         inputElm.textContent = "Something went wrong. Please try again.";
         console.log(error);
-    }).finally(() => chat-area.scrollTo(0, chat-area.scrollHeight));
+    }).finally(() => chatArea.scrollTo(0, chatArea.scrollHeight));
 };
 const handleChat = () => {
-    userInput = chatArea.value.trim();
-    //console.log(userMsg);
+    userInput = chatText.value.trim();
+    console.log(userInput);
     if(!userInput){
         return;
     }
-    chatArea.value = "";
-    chatArea.style.height = `${inputInitHeight}px`;
+    chatText.value = "";
+    chatText.style.height = `${inputInitHeight}px`;
     // append the user's msg to the chatbox
-    chat-area.appendChild(createChatDiv(userInput, "out-msg"));
+    chatArea.appendChild(createChatDiv(userInput, "out-msg"));
     setTimeout(() => {
         // display "Replying..."" while waiting for response
         const incomingChatDiv = createChatDiv("Replying...", "incoming");
-        chat-area.appendChild(incomingChatDiv);
+        chatArea.appendChild(incomingChatDiv);
         generateResponse(incomingChatDiv);
     }, 600);
 };
