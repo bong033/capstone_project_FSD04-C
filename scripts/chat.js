@@ -6,7 +6,7 @@ const inputElm = document.querySelector('input');
 const chatText = document.querySelector('#chat-text');
 
 //
-const API_KEY = "51517890d17a4c9d8dc7b18bb9fbd3c0";
+const API_KEY = "";
 const inputInitHeight = inputElm.scrollHeight;
 const createChatDiv = (msg, className) => {
     // create a chat <li> element with passed msg and className
